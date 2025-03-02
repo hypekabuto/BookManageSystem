@@ -31,5 +31,11 @@ namespace BookManageSystem
         {
 
         }
+
+        private void btnLogon_Click(object sender, EventArgs e)
+        {
+            FormLogon form = new FormLogon();
+            form.ShowDialog();
+        }
     }
 }

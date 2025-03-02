@@ -14,7 +14,7 @@ namespace BookManageSystem
         public SqlConnection connect()
         {
             //  连接数据库
-            string MySqlCon = "Data Source=127.0.0.1;Initial Catalog=BookManageSystem;User ID=sa;Encrypt=False";
+            string MySqlCon = "Data Source=127.0.0.1;Initial Catalog=BookManageSystem;User ID=sa;Password=root;Encrypt=False";
             con = new SqlConnection(MySqlCon);
             con.Open();
             return con;
