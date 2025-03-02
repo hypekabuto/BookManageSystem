@@ -16,7 +16,7 @@ namespace BookManageSystem
         {
             InitializeComponent();
         }
-
+        //test
         private void 注销ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
