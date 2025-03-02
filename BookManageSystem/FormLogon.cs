@@ -48,6 +48,7 @@ namespace BookManageSystem
                     MessageBox.Show("注册失败", "消息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 reader.Close();
+                //关闭连接
                 dao.DaoClose();
             }
         }
