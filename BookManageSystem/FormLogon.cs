@@ -42,7 +42,7 @@ namespace BookManageSystem
                 string sqlInsert = $"insert into T_User values('{id + 1}','{name}','{pwd}','{sex}','{idCard}','{tel}','1')";
                 if (dao.Execute(sqlInsert) > 0)
                 {
-                    MessageBox.Show("注册成功", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"注册成功，您的ID为{id + 1}", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else {
                     MessageBox.Show("注册失败", "消息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
