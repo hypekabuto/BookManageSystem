@@ -61,5 +61,29 @@ namespace BookManageSystem
             FormUpdatePwd_Admin updatePwdAdmin = new FormUpdatePwd_Admin();
             updatePwdAdmin.ShowDialog();
         }
+
+        private void 添加图书ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAddBook formAddBook = new FormAddBook();
+            formAddBook.ShowDialog();
+        }
+
+        private void 修改图书ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormManage formManage = new FormManage();
+            formManage.ShowDialog();
+        }
+
+        private void 下架图书ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormManage formManage = new FormManage();
+            formManage.ShowDialog();
+        }
+
+        private void 搜索图书ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormManage formManage = new FormManage();
+            formManage.ShowDialog();
+        }
     }
 }

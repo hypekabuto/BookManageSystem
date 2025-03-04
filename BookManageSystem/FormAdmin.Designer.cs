@@ -78,14 +78,14 @@
             // 修改密码ToolStripMenuItem
             // 
             this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
-            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(359, 66);
+            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(341, 66);
             this.修改密码ToolStripMenuItem.Text = "修改密码";
             this.修改密码ToolStripMenuItem.Click += new System.EventHandler(this.修改密码ToolStripMenuItem_Click);
             // 
             // 注销账号ToolStripMenuItem
             // 
             this.注销账号ToolStripMenuItem.Name = "注销账号ToolStripMenuItem";
-            this.注销账号ToolStripMenuItem.Size = new System.Drawing.Size(359, 66);
+            this.注销账号ToolStripMenuItem.Size = new System.Drawing.Size(341, 66);
             this.注销账号ToolStripMenuItem.Text = "注销账号";
             this.注销账号ToolStripMenuItem.Click += new System.EventHandler(this.注销账号ToolStripMenuItem_Click);
             // 
@@ -124,26 +124,30 @@
             // 添加图书ToolStripMenuItem
             // 
             this.添加图书ToolStripMenuItem.Name = "添加图书ToolStripMenuItem";
-            this.添加图书ToolStripMenuItem.Size = new System.Drawing.Size(341, 66);
+            this.添加图书ToolStripMenuItem.Size = new System.Drawing.Size(359, 66);
             this.添加图书ToolStripMenuItem.Text = "添加图书";
+            this.添加图书ToolStripMenuItem.Click += new System.EventHandler(this.添加图书ToolStripMenuItem_Click);
             // 
             // 修改图书ToolStripMenuItem
             // 
             this.修改图书ToolStripMenuItem.Name = "修改图书ToolStripMenuItem";
-            this.修改图书ToolStripMenuItem.Size = new System.Drawing.Size(341, 66);
+            this.修改图书ToolStripMenuItem.Size = new System.Drawing.Size(359, 66);
             this.修改图书ToolStripMenuItem.Text = "修改图书";
+            this.修改图书ToolStripMenuItem.Click += new System.EventHandler(this.修改图书ToolStripMenuItem_Click);
             // 
             // 下架图书ToolStripMenuItem
             // 
             this.下架图书ToolStripMenuItem.Name = "下架图书ToolStripMenuItem";
-            this.下架图书ToolStripMenuItem.Size = new System.Drawing.Size(341, 66);
+            this.下架图书ToolStripMenuItem.Size = new System.Drawing.Size(359, 66);
             this.下架图书ToolStripMenuItem.Text = "下架图书";
+            this.下架图书ToolStripMenuItem.Click += new System.EventHandler(this.下架图书ToolStripMenuItem_Click);
             // 
             // 搜索图书ToolStripMenuItem
             // 
             this.搜索图书ToolStripMenuItem.Name = "搜索图书ToolStripMenuItem";
-            this.搜索图书ToolStripMenuItem.Size = new System.Drawing.Size(341, 66);
+            this.搜索图书ToolStripMenuItem.Size = new System.Drawing.Size(359, 66);
             this.搜索图书ToolStripMenuItem.Text = "搜索图书";
+            this.搜索图书ToolStripMenuItem.Click += new System.EventHandler(this.搜索图书ToolStripMenuItem_Click);
             // 
             // 用户反馈ToolStripMenuItem
             // 

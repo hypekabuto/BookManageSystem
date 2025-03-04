@@ -54,5 +54,11 @@ namespace BookManageSystem
         {
             this.label1.Text = "用户" + Form1.name + ":" + Form1.id;
         }
+
+        private void 修改密码ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUpdatePwd_User formUpdatePwdUser = new FormUpdatePwd_User();
+            formUpdatePwdUser.ShowDialog();
+        }
     }
 }

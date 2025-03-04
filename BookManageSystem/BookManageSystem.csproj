@@ -53,6 +53,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddBook.Designer.cs">
+      <DependentUpon>FormAddBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,11 +71,30 @@
     <Compile Include="FormLogon.Designer.cs">
       <DependentUpon>FormLogon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManage.Designer.cs">
+      <DependentUpon>FormManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateBook.Designer.cs">
+      <DependentUpon>FormUpdateBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdatePwdUser.cs" />
     <Compile Include="FormUpdatePwd_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormUpdatePwd_Admin.Designer.cs">
       <DependentUpon>FormUpdatePwd_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdatePwd_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdatePwd_User.Designer.cs">
+      <DependentUpon>FormUpdatePwd_User.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUser.cs">
       <SubType>Form</SubType>
@@ -82,14 +107,26 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddBook.resx">
+      <DependentUpon>FormAddBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogon.resx">
       <DependentUpon>FormLogon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormManage.resx">
+      <DependentUpon>FormManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateBook.resx">
+      <DependentUpon>FormUpdateBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUpdatePwd_Admin.resx">
       <DependentUpon>FormUpdatePwd_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdatePwd_User.resx">
+      <DependentUpon>FormUpdatePwd_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUser.resx">
       <DependentUpon>FormUser.cs</DependentUpon>
