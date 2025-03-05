@@ -57,8 +57,16 @@ namespace BookManageSystem
                 string name = dgv.CurrentRow.Cells[1].Value.ToString();
                 lblBookId.Text = id;
                 lblBookName.Text = name;
-
-            }
+                Bid = int.Parse(id);
+                Bname = name;
+                Author = dgv.CurrentRow.Cells[2].Value.ToString();
+                Publisher = dgv.CurrentRow.Cells[3].Value.ToString(); 
+                PubDate = dgv.CurrentRow.Cells[4].Value.ToString(); 
+                Type = dgv.CurrentRow.Cells[5].Value.ToString(); 
+                Price = float.Parse(dgv.CurrentRow.Cells[6].Value.ToString());
+                Num = int.Parse(dgv.CurrentRow.Cells[7].Value.ToString()); 
+                Introduce = dgv.CurrentRow.Cells[8].Value.ToString(); 
+    }
         }
 
         private void button4_Click(object sender, EventArgs e)

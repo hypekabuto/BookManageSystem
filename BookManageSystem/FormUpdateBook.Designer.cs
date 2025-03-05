@@ -260,10 +260,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBid);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormUpdateBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "修改图书";
+            this.Load += new System.EventHandler(this.FormUpdateBook_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

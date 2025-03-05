@@ -65,6 +65,12 @@
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBorrowBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBorrowBook.Designer.cs">
+      <DependentUpon>FormBorrowBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBorrowBook.resx">
+      <DependentUpon>FormBorrowBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogon.resx">
       <DependentUpon>FormLogon.cs</DependentUpon>
