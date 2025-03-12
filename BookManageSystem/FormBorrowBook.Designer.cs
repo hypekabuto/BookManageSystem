@@ -69,6 +69,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "租借";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // dgv
             // 
@@ -94,6 +95,7 @@
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(1342, 598);
             this.dgv.TabIndex = 2;
+            this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick_1);
             // 
             // Column1
             // 
@@ -165,6 +167,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "返回";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // lblName
             // 
@@ -214,6 +217,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormBorrowBook";
             this.Text = "FormBorrowBook";
+            this.Load += new System.EventHandler(this.FormBorrowBook_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -19,11 +19,6 @@ namespace BookManageSystem
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void LoadBoolList() { 
             Dao dao = new Dao();
             dao.connect();
@@ -37,7 +32,7 @@ namespace BookManageSystem
             dao.DaoClose();
         }
 
-        private void FormBorrowBook_Load(object sender, EventArgs e)
+        private void FormBorrowBook_Load_1(object sender, EventArgs e)
         {
             this.LoadBoolList();
             cobNum.Text = "1";
@@ -47,27 +42,27 @@ namespace BookManageSystem
             }
             else {
                 lblName.Text = dgv.CurrentRow.Cells[1].Value.ToString();
-            }   
+            }
         }
 
-        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgv_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (dgv.CurrentRow == null || dgv.CurrentRow.Cells[0].Value == null)
             {
                 MessageBox.Show("选中无效数据", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            else {
+            else { 
                 lblName.Text = dgv.CurrentRow.Cells[1].Value.ToString();
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             string name = dgv.CurrentRow.Cells[1].Value.ToString();
             int id = int.Parse(dgv.CurrentRow.Cells[0].Value.ToString());
@@ -79,29 +74,31 @@ namespace BookManageSystem
             string selectKeySql = $"select key from T_Borrow where key = '{key}'";
             SqlDataReader reader = dao.read(selectKeySql);
             reader.Read();
-            while (true) {
+            while (true)
+            {
                 string selectKeySql2 = $"select key from T_Borrow where key = '{key}'";
-                SqlDataReader reader2 = dao.read(selectKeySql2);
+                SqlDataReader reader2 = dao.read(selectKeySql);
                 reader2.Read();
-                if (reader2.Read() == false) { 
+                reader2.Close();
+
+
+                if (reader.Read() == false) {
                     break;
                 }
-                reader2.Close();
             }
             reader.Close();
-            string selectNumSql = $"select Bid from T_Book where status = 1 and 0 >= 'Num - {num}' and Bid = '{id}'";
-            SqlDataReader reader3 = dao.read(selectNumSql);
-            if (!reader3.Read())
+            string selectFlag = $"select Bid from T_Book where 0 >= 'Num - {num}' and Bid = '{id}'";
+            SqlDataReader read3 = dao.read(selectFlag);
+            if (read3.Read() == false)
             {
                 MessageBox.Show("库存不足", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                reader3.Close();
+                read3.Close();
                 dao.DaoClose();
                 return;
             }
             else { 
                 
             }
-
 
         }
     }
