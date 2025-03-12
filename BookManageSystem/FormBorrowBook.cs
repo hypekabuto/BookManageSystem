@@ -20,6 +20,7 @@ namespace BookManageSystem
         }
 
         private void LoadBoolList() { 
+            this.dgv.Rows.Clear();
             Dao dao = new Dao();
             dao.connect();
             string selectBookListSql = "select * from T_Book where status = 1";
@@ -71,23 +72,26 @@ namespace BookManageSystem
             int key = 1;
             Dao dao = new Dao();
             dao.connect();
-            string selectKeySql = $"select key from T_Borrow where key = '{key}'";
+            string selectKeySql = $"select [key] from T_Borrow where [key] = '{key}'";
             SqlDataReader reader = dao.read(selectKeySql);
             reader.Read();
             while (true)
             {
-                string selectKeySql2 = $"select key from T_Borrow where key = '{key}'";
-                SqlDataReader reader2 = dao.read(selectKeySql);
+                key++;
+                string selectKeySql2 = $"select [key] from T_Borrow where [key] = '{key}'";
+                SqlDataReader reader2 = dao.read(selectKeySql2);
                 reader2.Read();
-                reader2.Close();
+                
 
 
-                if (reader.Read() == false) {
+                if (!reader2.HasRows) {
+                    reader2.Close();
                     break;
                 }
+                reader2.Close();
             }
             reader.Close();
-            string selectFlag = $"select Bid from T_Book where 0 >= 'Num - {num}' and Bid = '{id}'";
+            string selectFlag = $"select Bid from T_Book where 0 <= Num - '{num}' and Bid = '{id}'";
             SqlDataReader read3 = dao.read(selectFlag);
             if (read3.Read() == false)
             {
@@ -97,7 +101,20 @@ namespace BookManageSystem
                 return;
             }
             else { 
-                
+                string IsertSql = $"insert into T_Borrow values('{key}','{Form1.id}','{Form1.name}','{name}','{date}','{num}','{id}')";
+                string updateSql = $"update T_Book set Num = Num - {num},BorrowCount =  BorrowCount + {num} where Bid = '{id}' and status = 1";
+                if (dao.Execute(IsertSql) + dao.Execute(updateSql) >= 2)
+                {
+                    MessageBox.Show("租借成功", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dao.DaoClose();
+                    read3.Close();
+                    this.LoadBoolList();
+                }
+                else {
+                    MessageBox.Show("租借失败", "消息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    dao.DaoClose();
+                    read3.Close();
+                }
             }
 
         }
