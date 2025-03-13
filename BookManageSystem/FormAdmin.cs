@@ -85,5 +85,17 @@ namespace BookManageSystem
             FormManage formManage = new FormManage();
             formManage.ShowDialog();
         }
+
+        private void 查看用户租界情况ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLookBorrow formLookBorrow = new FormLookBorrow();
+            formLookBorrow.ShowDialog();
+        }
+
+        private void 用户信息管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormLookUser formLookUser = new FormLookUser();
+            formLookUser.ShowDialog();
+        }
     }
 }

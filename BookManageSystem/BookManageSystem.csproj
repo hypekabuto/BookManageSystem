@@ -77,11 +77,29 @@
     <Compile Include="FormLogon.Designer.cs">
       <DependentUpon>FormLogon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLookBorrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLookBorrow.Designer.cs">
+      <DependentUpon>FormLookBorrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLookUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLookUser.Designer.cs">
+      <DependentUpon>FormLookUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormManage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormManage.Designer.cs">
       <DependentUpon>FormManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReturnBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReturnBook.Designer.cs">
+      <DependentUpon>FormReturnBook.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUpdateBook.cs">
       <SubType>Form</SubType>
@@ -125,8 +143,17 @@
     <EmbeddedResource Include="FormLogon.resx">
       <DependentUpon>FormLogon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLookBorrow.resx">
+      <DependentUpon>FormLookBorrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLookUser.resx">
+      <DependentUpon>FormLookUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormManage.resx">
       <DependentUpon>FormManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReturnBook.resx">
+      <DependentUpon>FormReturnBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpdateBook.resx">
       <DependentUpon>FormUpdateBook.cs</DependentUpon>
