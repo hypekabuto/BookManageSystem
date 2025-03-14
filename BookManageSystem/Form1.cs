@@ -50,6 +50,8 @@ namespace BookManageSystem
             dao.connect();
             string sql = $"select * from T_User where Uid = {id} and Pwd = {pwd} and Used = 1";
             SqlDataReader reader = dao.read(sql);
+            string sql2 = $"select * from T_User where Uid = {id} and Pwd = {pwd} and Used = 0";
+            SqlDataReader reader2 = dao.read(sql2);
             if (reader.Read() == true)
             {
                 Form1.id = id;
@@ -62,12 +64,20 @@ namespace BookManageSystem
                 FormUser formUser = new FormUser();
                 formUser.ShowDialog();
                 reader.Close();
+                reader2.Close();
                 readerName.Close();
                 dao.DaoClose();
             }
-            else
-            {
+            else if (reader2.Read() == true) {
+                MessageBox.Show("该账户已暂停使用", "消息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                reader.Close();
+                reader2.Close();
+                dao.DaoClose();
+            } else{
                 MessageBox.Show("账号或密码错误", "消息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                reader.Close();
+                reader2.Close();
+                dao.DaoClose();
             }
         }
 

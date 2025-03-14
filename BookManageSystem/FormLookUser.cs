@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -71,9 +72,57 @@ namespace BookManageSystem
                 else
                 {
                     dao.DaoClose();
-                    MessageBox.Show("操作失败", "消���", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("操作失败", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (lblID.Text == "NULL")
+            {
+                MessageBox.Show("请选择用户", "消息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                Dao dao = new Dao();
+                dao.connect();
+                string updateSql = $"update T_User set Used = 1 where Uid = {int.Parse(lblID.Text)}";
+                if (dao.Execute(updateSql) == 1)
+                {
+                    MessageBox.Show("账号已重新使用", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.LoadUserList();
+                    dao.DaoClose();
+                }
+                else
+                {
+                    dao.DaoClose();
+                    MessageBox.Show("操作失败", "消息", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.lblID.Text = dgv.CurrentRow.Cells[0].Value.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string keys = txtInputKey.Text.Trim();
+            dgv.Rows.Clear();
+            Dao dao = new Dao();
+            dao.connect();
+            string selectUserListSql = $"select Uid,Uname,Sex,IDCard,Tel,Used from T_User where Uname like '%{keys}%' or sex like '%{keys}%'" +
+                $" or Used like '%{keys}%'";
+            SqlDataReader reader = dao.read(selectUserListSql);
+                while (reader.Read())
+                {
+                    dgv.Rows.Add(reader[0].ToString(), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString());
+                }
+                reader.Close();
+                dao.DaoClose();
         }
     }
 }

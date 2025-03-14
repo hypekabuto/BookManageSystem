@@ -78,6 +78,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "搜索";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -109,6 +110,7 @@
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(1276, 687);
             this.dgv.TabIndex = 7;
+            this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
             // Column1
             // 
@@ -202,6 +204,7 @@
             this.button5.TabIndex = 16;
             this.button5.Text = "允许使用";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // FormLookUser
             // 
