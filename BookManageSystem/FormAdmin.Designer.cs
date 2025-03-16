@@ -165,6 +165,7 @@
             this.图书评价管理ToolStripMenuItem.Name = "图书评价管理ToolStripMenuItem";
             this.图书评价管理ToolStripMenuItem.Size = new System.Drawing.Size(318, 50);
             this.图书评价管理ToolStripMenuItem.Text = "图书评价管理";
+            this.图书评价管理ToolStripMenuItem.Click += new System.EventHandler(this.图书评价管理ToolStripMenuItem_Click);
             // 
             // 消息管理ToolStripMenuItem
             // 

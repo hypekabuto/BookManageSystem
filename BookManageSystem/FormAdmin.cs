@@ -97,5 +97,11 @@ namespace BookManageSystem
             FormLookUser formLookUser = new FormLookUser();
             formLookUser.ShowDialog();
         }
+
+        private void 图书评价管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDiscussion formDiscuss = new FormDiscussion();
+            formDiscuss.ShowDialog();
+        }
     }
 }
