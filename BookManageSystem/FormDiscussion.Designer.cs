@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
@@ -39,14 +47,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cobID = new System.Windows.Forms.ComboBox();
             this.cobScore = new System.Windows.Forms.ComboBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +72,54 @@
             this.dgv.TabIndex = 8;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Key";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "图书编号";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "书名";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "账号";
+            this.Column8.MinimumWidth = 8;
+            this.Column8.Name = "Column8";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "用户名";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "评论内容";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "评论时间";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "评分";
+            this.Column7.MinimumWidth = 8;
+            this.Column7.Name = "Column7";
+            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -83,6 +131,7 @@
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "删除";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSend
             // 
@@ -177,6 +226,7 @@
             this.cobID.Name = "cobID";
             this.cobID.Size = new System.Drawing.Size(259, 39);
             this.cobID.TabIndex = 19;
+            this.cobID.TextChanged += new System.EventHandler(this.cobID_TextChanged);
             // 
             // cobScore
             // 
@@ -194,54 +244,6 @@
             this.cobScore.Name = "cobScore";
             this.cobScore.Size = new System.Drawing.Size(259, 39);
             this.cobScore.TabIndex = 20;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Key";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "图书编号";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "书名";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "账号";
-            this.Column8.MinimumWidth = 8;
-            this.Column8.Name = "Column8";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "用户名";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "评论内容";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "评论时间";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "评分";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
             // 
             // FormDiscussion
             // 

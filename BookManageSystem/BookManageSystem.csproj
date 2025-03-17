@@ -65,6 +65,12 @@
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAdminFeedBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdminFeedBack.Designer.cs">
+      <DependentUpon>FormAdminFeedBack.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormBorrowBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,12 @@
     </Compile>
     <Compile Include="FormDiscussion.Designer.cs">
       <DependentUpon>FormDiscussion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFeedBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFeedBack.Designer.cs">
+      <DependentUpon>FormFeedBack.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogon.cs">
       <SubType>Form</SubType>
@@ -143,11 +155,17 @@
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminFeedBack.resx">
+      <DependentUpon>FormAdminFeedBack.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormBorrowBook.resx">
       <DependentUpon>FormBorrowBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDiscussion.resx">
       <DependentUpon>FormDiscussion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFeedBack.resx">
+      <DependentUpon>FormFeedBack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogon.resx">
       <DependentUpon>FormLogon.cs</DependentUpon>

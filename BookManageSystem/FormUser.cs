@@ -72,5 +72,17 @@ namespace BookManageSystem
             FormReturnBook formReturnBook = new FormReturnBook();
             formReturnBook.ShowDialog();
         }
+
+        private void 查看评价ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDiscussion formDiscussion = new FormDiscussion();
+            formDiscussion.ShowDialog();
+        }
+
+        private void 反馈到管理员ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormFeedBack formFeedBack = new FormFeedBack();
+            formFeedBack.ShowDialog();
+        }
     }
 }

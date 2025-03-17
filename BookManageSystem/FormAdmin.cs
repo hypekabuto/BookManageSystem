@@ -103,5 +103,11 @@ namespace BookManageSystem
             FormDiscussion formDiscuss = new FormDiscussion();
             formDiscuss.ShowDialog();
         }
+
+        private void 查看反馈ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAdminFeedBack formAdminFeedBack = new FormAdminFeedBack();
+            formAdminFeedBack.ShowDialog();
+        }
     }
 }

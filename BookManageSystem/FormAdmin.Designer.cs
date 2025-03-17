@@ -42,9 +42,9 @@
             this.搜索图书ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.用户反馈ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.图书评价管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.消息管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出登录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.查看反馈ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,7 +155,7 @@
             // 
             this.用户反馈ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.图书评价管理ToolStripMenuItem,
-            this.消息管理ToolStripMenuItem});
+            this.查看反馈ToolStripMenuItem});
             this.用户反馈ToolStripMenuItem.Name = "用户反馈ToolStripMenuItem";
             this.用户反馈ToolStripMenuItem.Size = new System.Drawing.Size(162, 46);
             this.用户反馈ToolStripMenuItem.Text = "用户反馈";
@@ -166,12 +166,6 @@
             this.图书评价管理ToolStripMenuItem.Size = new System.Drawing.Size(318, 50);
             this.图书评价管理ToolStripMenuItem.Text = "图书评价管理";
             this.图书评价管理ToolStripMenuItem.Click += new System.EventHandler(this.图书评价管理ToolStripMenuItem_Click);
-            // 
-            // 消息管理ToolStripMenuItem
-            // 
-            this.消息管理ToolStripMenuItem.Name = "消息管理ToolStripMenuItem";
-            this.消息管理ToolStripMenuItem.Size = new System.Drawing.Size(318, 50);
-            this.消息管理ToolStripMenuItem.Text = "消息管理";
             // 
             // 退出登录ToolStripMenuItem
             // 
@@ -192,6 +186,13 @@
             this.label1.Size = new System.Drawing.Size(104, 39);
             this.label1.TabIndex = 2;
             this.label1.Text = "管理员";
+            // 
+            // 查看反馈ToolStripMenuItem
+            // 
+            this.查看反馈ToolStripMenuItem.Name = "查看反馈ToolStripMenuItem";
+            this.查看反馈ToolStripMenuItem.Size = new System.Drawing.Size(318, 50);
+            this.查看反馈ToolStripMenuItem.Text = "查看反馈";
+            this.查看反馈ToolStripMenuItem.Click += new System.EventHandler(this.查看反馈ToolStripMenuItem_Click);
             // 
             // FormAdmin
             // 
@@ -231,8 +232,8 @@
         private System.Windows.Forms.ToolStripMenuItem 搜索图书ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 用户反馈ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 图书评价管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 消息管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 退出登录ToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem 查看反馈ToolStripMenuItem;
     }
 }

@@ -28,6 +28,7 @@ namespace BookManageSystem
 
         }
         private void LoadDiscussion() {
+            this.dgv.Rows.Clear();
             Dao dao = new Dao();
             dao.connect();
             string sql = $"SELECT * FROM T_Discussion";
@@ -44,7 +45,7 @@ namespace BookManageSystem
         {
             Dao dao = new Dao();
             dao.connect();
-            string sql = $"SELECT Bid FROM T_Discussion where Uid = {Form1.id}";
+            string sql = $"SELECT Bid FROM T_Borrow where Uid = {Form1.id}";
             SqlDataReader selectBorrowInformation = dao.read(sql);
             while (selectBorrowInformation.Read())
             {
@@ -83,13 +84,76 @@ namespace BookManageSystem
                 int id = Form1.id;
                 string Uname = Form1.name;
                 string Pwords = txtPWords.Text;
-                DateTime time = DateTime.Now;
+                DateTime nowTime = DateTime.Now;
                 string score = cobScore.Text;
                 int key = 0;
                 Dao dao = new Dao();
                 dao.connect();
                 string keySql = $"select [key] from T_Discussion where [key] = {key}";
+                SqlDataReader keyReader = dao.read(keySql);
+                while (true) {
+                    key++;
+                    string selectsql = $"select [key] from T_Discussion where [key] = {key}";
+                    SqlDataReader circlereader = dao.read(selectsql);
+                    circlereader.Read();
+                    if (!circlereader.HasRows)
+                    {
+                        break;
+                        circlereader.Close();
+                    }
+                    else {
+                        circlereader.Close();
+                    }
+                }
+                string insertSql = $"insert into T_Discussion values('{key}','{Bid}','{Bname}','{id}','{Uname}','{Pwords}','{nowTime}','{score}')";
+                int result = dao.Execute(insertSql);
+                if (result > 0)
+                {
+                    MessageBox.Show("添加成功", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else {
+                    MessageBox.Show("发表失败，联系管理员", "消息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                this.LoadDiscussion();
+                keyReader.Close();
+                dao.DaoClose();
+            }
+        }
 
+        private void cobID_TextChanged(object sender, EventArgs e)
+        {
+            int id = int.Parse(cobID.Text);
+            Dao dao = new Dao();
+            dao.connect();
+            string selectSql = $"select Bname from T_Book where Bid = {id}";
+            SqlDataReader reader = dao.read(selectSql);
+            reader.Read();
+            string name = reader[0].ToString();
+            lblName.Text = name;
+            reader.Close();
+            dao.DaoClose();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dgv.CurrentRow.Cells[0].Value == null) {
+                MessageBox.Show("选中了无效数据", "消息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else{
+                Dao dao = new Dao();
+                dao.connect();
+                string deletedSql = $"delete T_Discussion where [key] = {int.Parse(dgv.CurrentRow.Cells[0].Value.ToString())}";
+                if(dao.Execute(deletedSql) > 0)
+                {
+                    MessageBox.Show("删除成功", "消息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("删除失败，联系管理员", "消息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                this.LoadDiscussion();
+                dao.DaoClose(); 
             }
         }
     }

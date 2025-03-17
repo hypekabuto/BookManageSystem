@@ -97,14 +97,14 @@
             // 租借图书ToolStripMenuItem
             // 
             this.租借图书ToolStripMenuItem.Name = "租借图书ToolStripMenuItem";
-            this.租借图书ToolStripMenuItem.Size = new System.Drawing.Size(270, 50);
+            this.租借图书ToolStripMenuItem.Size = new System.Drawing.Size(254, 50);
             this.租借图书ToolStripMenuItem.Text = "租借图书";
             this.租借图书ToolStripMenuItem.Click += new System.EventHandler(this.租借图书ToolStripMenuItem_Click);
             // 
             // 归还图书ToolStripMenuItem
             // 
             this.归还图书ToolStripMenuItem.Name = "归还图书ToolStripMenuItem";
-            this.归还图书ToolStripMenuItem.Size = new System.Drawing.Size(270, 50);
+            this.归还图书ToolStripMenuItem.Size = new System.Drawing.Size(254, 50);
             this.归还图书ToolStripMenuItem.Text = "归还图书";
             this.归还图书ToolStripMenuItem.Click += new System.EventHandler(this.归还图书ToolStripMenuItem_Click);
             // 
@@ -119,8 +119,9 @@
             // 查看评价ToolStripMenuItem
             // 
             this.查看评价ToolStripMenuItem.Name = "查看评价ToolStripMenuItem";
-            this.查看评价ToolStripMenuItem.Size = new System.Drawing.Size(254, 50);
+            this.查看评价ToolStripMenuItem.Size = new System.Drawing.Size(270, 50);
             this.查看评价ToolStripMenuItem.Text = "查看评价";
+            this.查看评价ToolStripMenuItem.Click += new System.EventHandler(this.查看评价ToolStripMenuItem_Click);
             // 
             // 系统反馈ToolStripMenuItem
             // 
@@ -135,6 +136,7 @@
             this.反馈到管理员ToolStripMenuItem.Name = "反馈到管理员ToolStripMenuItem";
             this.反馈到管理员ToolStripMenuItem.Size = new System.Drawing.Size(318, 50);
             this.反馈到管理员ToolStripMenuItem.Text = "反馈到管理员";
+            this.反馈到管理员ToolStripMenuItem.Click += new System.EventHandler(this.反馈到管理员ToolStripMenuItem_Click);
             // 
             // 退出登录ToolStripMenuItem
             // 
